@@ -13,5 +13,12 @@ namespace ctOSTablet
     /// </summary>
     public partial class App : Application
     {
+        bool _isBootCompleted = false;
+        public bool isBootCompleted
+        {
+            get { return _isBootCompleted; }
+            set { _isBootCompleted = value; }
+        }
+        public SystemEvent sysEvent;
     }
 }

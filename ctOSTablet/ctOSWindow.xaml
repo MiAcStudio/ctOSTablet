@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="ctOSTablet.ctOSWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ctOSTablet"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400" FontFamily="Product Sans" Width="400" Height="300">
+    <Border BorderBrush="Black" BorderThickness="1,1,1,1">
+
+        <Grid Background="#FFC7C7C7">
+            <Grid x:Name="gHeader" Height="20" VerticalAlignment="Top" Background="#FF979797" MouseDown="gHeader_MouseDown" MouseUp="gHeader_MouseUp" MouseMove="gHeader_MouseMove" >
+                <Label x:Name="HeaderTitle" HorizontalAlignment="Left" Width="199" />
+                <Button x:Name="vbClose" Height="20" VerticalAlignment="Center" HorizontalAlignment="Right" Background="{x:Null}" Margin="371,0,0,0" Click="vbClose_Click" MouseEnter="vbClose_MouseEnter" MouseLeave="vbClose_MouseLeave" Width="27">
+                    <Canvas Width="20" Height="20">
+                        <Path x:Name="ExitIcon" Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" Fill="White" Canvas.Top="-5" Canvas.Left="-1" />
+                    </Canvas>
+                </Button>
+            </Grid>
+            <ContentPresenter x:Name="gContent" Margin="0,20,0,0"/>
+        </Grid>
+    </Border>
+</UserControl>

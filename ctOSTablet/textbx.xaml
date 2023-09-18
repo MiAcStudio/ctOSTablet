@@ -1,0 +1,30 @@
+﻿<UserControl x:Name="TXTBX" x:Class="ctOSTablet.textbx"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ctOSTablet"
+             mc:Ignorable="d" Height="55" Width="285">
+
+
+    <Grid>
+        <Path Stroke="White" StrokeThickness="2" Margin="0,0,-5,0" Stretch="Fill">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure IsClosed="True" StartPoint="20,0">
+                        <ArcSegment Point="0,20" Size="20,20"/>
+                        <LineSegment Point="0,40"/>
+                        <ArcSegment Point="20,60" Size="20,20"/>
+                        <LineSegment Point="158,60"/>
+                        <ArcSegment Point="178,40" Size="20,20"/>
+                        <LineSegment Point="178,20"/>
+                        <ArcSegment Point="158,0" Size="20,20"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+
+        </Path>
+        <TextBox x:Name="txtmain" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Background="{x:Null}" Foreground="White" BorderThickness="0" VerticalContentAlignment="Center" FontFamily="Product Sans" UndoLimit="0" Cursor="None" FontSize="15"/>
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,15 @@
+﻿<Page x:Class="ctOSTablet.BOS"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ctOSTablet"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+      Title="BOS" Background="#FF838483">
+
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="1280" Background="#FF636262"/>
+
+    </Grid>
+</Page>

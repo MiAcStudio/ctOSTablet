@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ctOSTablet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="ctOS Tablet" Height="832" Width="1289" Background="Black" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        RenderOptions.BitmapScalingMode="HighQuality" Loaded="Window_Loaded" KeyDown="Window_KeyDown" WindowStyle="None" WindowState="Maximized" Cursor="None">
     <Grid>
-        
+        <Frame x:Name="frame" Foreground="White" Background="Black" NavigationUIVisibility="Hidden"/>
+
     </Grid>
 </Window>
