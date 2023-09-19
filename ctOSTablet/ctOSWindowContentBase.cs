@@ -16,6 +16,7 @@ namespace ctOSTablet
         protected virtual void OnWindowClosed(EventArgs e)
         {
             EventHandler handler = WindowClosed;
+            if(handler!=null)
             handler.Invoke(this, e);
         }
         public void RaiseWindowClosed()

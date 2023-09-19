@@ -4,8 +4,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ctOSTablet"
-      mc:Ignorable="d" d:DesignWidth="1280"
-      Title="Desktop" Height="800" RenderOptions.BitmapScalingMode="HighQuality" Cursor="Arrow">
+      mc:Ignorable="d" d:DesignWidth="1280" d:Height="800"
+      Title="Desktop" RenderOptions.BitmapScalingMode="HighQuality" Cursor="Arrow">
 
     <Grid x:Name="gMain">
         <Viewbox x:Name="desktopBG" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform" Margin="251,150,257,130" Visibility="Hidden">
@@ -1437,12 +1437,24 @@
                 </Canvas>
             </Canvas>
         </Viewbox>
+        <ListView x:Name="lvDesktop" Background="{x:Null}" Margin="0,0,0,75">
+        </ListView>
         <Grid x:Name="gTaskbar" Height="70" VerticalAlignment="Bottom">
-            <Grid Margin="0,10,0,10" Background="Black"/>
-            <Grid x:Name="btnStart" Margin="103,0,0,0" MouseMove="btnStart_MouseMove" MouseLeave="btnStart_MouseLeave" HorizontalAlignment="Left" Width="70">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Height="50" Background="Black" VerticalAlignment="Center" Grid.ColumnSpan="3">
+                <Label x:Name="lblTime" Content="12:30" HorizontalAlignment="Right" Width="100" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" FontFamily="Arial"/>
+            </Grid>
+            <Grid x:Name="btnStart" Grid.Column="0" MouseMove="btnStart_MouseMove" MouseLeave="btnStart_MouseLeave" HorizontalAlignment="Left" Width="70" Margin="80,0,0,0">
                 <Ellipse x:Name="bgStart" Stroke="White" Fill="Black"/>
                 <Image Source="/grid.png"  />
             </Grid>
+            <Button Grid.Column="2" Width="50" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="{x:Null}" VerticalContentAlignment="Top" BorderThickness="0,0,0,0">
+                <Image Source="/laptop.png" VerticalAlignment="Top"/>
+            </Button>
         </Grid>
     </Grid>
 </Page>

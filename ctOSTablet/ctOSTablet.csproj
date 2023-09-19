@@ -79,6 +79,9 @@
     <Compile Include="textbx.xaml.cs">
       <DependentUpon>textbx.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowContent\Terminal.xaml.cs">
+      <DependentUpon>Terminal.xaml</DependentUpon>
+    </Compile>
     <Page Include="Boot.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -133,6 +136,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WindowContent\Terminal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -164,6 +171,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="grid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="laptop.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

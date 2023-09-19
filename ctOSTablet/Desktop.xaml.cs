@@ -13,6 +13,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace ctOSTablet
 {
@@ -24,9 +25,17 @@ namespace ctOSTablet
         public Desktop()
         {
             InitializeComponent();
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Tick += (object s, EventArgs e) => {
+                lblTime.Content = DateTime.Now.ToString("HH:mm");
+            };
+            timer.Interval = TimeSpan.FromMilliseconds(1000);
+            timer.Start();
+
             this.Opacity = 0;
             desktopBG.Visibility = Visibility.Visible;
             gMain.Children.Add(new ctOSWindow());
+            gMain.Children.Add(new ctOSWindow(new Terminal()));
             DoubleAnimation fadeIn = new DoubleAnimation()
             {
                 From = 0,
